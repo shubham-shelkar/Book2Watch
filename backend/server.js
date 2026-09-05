@@ -19,7 +19,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/admin", adminRoutes)
+app.use("/api/admin", adminRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/movies", movieRoutes);
 app.use("/api/cinemas", cinemaRoutes);
@@ -37,8 +37,10 @@ mongoose
   .then(() => {
     console.log("MongoDB connected successfully");
 
-    app.listen(process.env.PORT || 5000, () => {
-      console.log("Server running on http://localhost:5000");
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on port ${PORT}`);
     });
   })
   .catch((error) => {
