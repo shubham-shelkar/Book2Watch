@@ -1,0 +1,1275 @@
+/* =========================================================
+   BOOK2WATCH - ADMIN MOVIES
+   Dark + Red Professional Theme
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-movies-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #090909;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+  width: 260px;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: #0d0d0d;
+  border-right: 1px solid #222222;
+
+  padding: 30px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 100;
+}
+
+
+/* Sidebar Scrollbar */
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #ff1f2b;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.admin-brand {
+  text-decoration: none;
+  display: block;
+  padding: 0 15px;
+}
+
+.brand-title {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.brand-title span {
+  color: #e50914;
+}
+
+.brand-subtitle {
+  color: #e50914;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   SIDEBAR LINE
+========================================================= */
+
+.sidebar-line {
+  width: calc(100% - 20px);
+  height: 1px;
+
+  background: #292929;
+
+  margin: 30px auto 20px;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-link {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 15px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  color: #bdbdbd;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.sidebar-link:hover {
+  background: #181818;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.sidebar-link.active {
+  background: #e50914;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(229, 9, 20, 0.18);
+}
+
+.sidebar-icon {
+  width: 24px;
+
+  text-align: center;
+
+  font-size: 19px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SIDEBAR LOGOUT
+========================================================= */
+
+.sidebar-bottom {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #292929;
+}
+
+.sidebar-logout {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #bdbdbd;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 15px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  text-align: left;
+}
+
+.sidebar-logout:hover {
+  background: rgba(229, 9, 20, 0.08);
+  color: #e50914;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-movies-main {
+  margin-left: 260px;
+
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  padding: 34px 38px 60px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(229, 9, 20, 0.06),
+      transparent 35%
+    ),
+    #090909;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.movies-admin-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.movies-admin-header h1 {
+  margin: 0;
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.movies-admin-header p {
+  margin: 8px 0 0;
+
+  color: #888888;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ADMIN PROFILE
+========================================================= */
+
+.admin-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.admin-avatar {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  border: 1px solid #353535;
+
+  background: #171717;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+.admin-profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.admin-profile-info strong {
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.admin-profile-info span {
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR MESSAGE
+========================================================= */
+
+.success-message,
+.error-message {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.success-message {
+  background: rgba(35, 180, 90, 0.08);
+
+  border: 1px solid rgba(35, 180, 90, 0.3);
+
+  color: #67df91;
+}
+
+.error-message {
+  background: rgba(229, 9, 20, 0.08);
+
+  border: 1px solid rgba(229, 9, 20, 0.3);
+
+  color: #ff646c;
+}
+
+.success-message span,
+.error-message span {
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   MOVIE FORM SECTION
+========================================================= */
+
+.movie-form-section {
+  background: #101010;
+
+  border: 1px solid #282828;
+
+  border-radius: 15px;
+
+  padding: 28px;
+
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #262626;
+}
+
+.form-small-title {
+  margin: 0 0 7px;
+
+  color: #e50914;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.form-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+.close-form-btn {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #333333;
+
+  background: #181818;
+
+  color: #aaaaaa;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: all 0.2s ease;
+}
+
+.close-form-btn:hover {
+  background: #e50914;
+
+  border-color: #e50914;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.movie-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #d5d5d5;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  background: #181818;
+
+  color: #ffffff;
+
+  border: 1px solid #303030;
+
+  border-radius: 8px;
+
+  padding: 13px 14px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  height: 46px;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #656565;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e50914;
+
+  box-shadow:
+    0 0 0 3px rgba(229, 9, 20, 0.08);
+}
+
+
+/* =========================================================
+   FORM BUTTONS
+========================================================= */
+
+.form-buttons {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 8px;
+}
+
+.cancel-btn,
+.save-movie-btn {
+  height: 44px;
+
+  padding: 0 22px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background: #181818;
+
+  border: 1px solid #343434;
+
+  color: #bdbdbd;
+}
+
+.cancel-btn:hover {
+  background: #222222;
+
+  color: #ffffff;
+}
+
+.save-movie-btn {
+  background: #e50914;
+
+  border: 1px solid #e50914;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(229, 9, 20, 0.16);
+}
+
+.save-movie-btn:hover {
+  background: #c90812;
+
+  border-color: #c90812;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOVIES MANAGEMENT
+========================================================= */
+
+.movies-management {
+  background: #101010;
+
+  border: 1px solid #282828;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MOVIE LIST HEADER
+========================================================= */
+
+.movies-list-header {
+  padding: 25px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #262626;
+}
+
+.movies-list-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+.movies-list-header p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   MOVIE ACTIONS
+========================================================= */
+
+.movie-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.movie-search {
+  width: 240px;
+
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  background: #181818;
+
+  border: 1px solid #303030;
+
+  border-radius: 8px;
+
+  transition: border-color 0.2s ease;
+}
+
+.movie-search:focus-within {
+  border-color: #e50914;
+}
+
+.movie-search span {
+  font-size: 15px;
+
+  opacity: 0.7;
+}
+
+.movie-search input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.movie-search input::placeholder {
+  color: #666666;
+}
+
+
+/* =========================================================
+   ADD MOVIE BUTTON
+========================================================= */
+
+.add-movie-btn {
+  height: 43px;
+
+  padding: 0 18px;
+
+  background: #e50914;
+
+  border: 1px solid #e50914;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.add-movie-btn:hover {
+  background: #c90812;
+
+  border-color: #c90812;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(229, 9, 20, 0.15);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.movies-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.movies-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.movies-table-wrapper::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+.movies-table-wrapper::-webkit-scrollbar-thumb {
+  background: #333333;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.movies-table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: collapse;
+}
+
+.movies-table thead {
+  background: #151515;
+}
+
+.movies-table th {
+  padding: 16px 18px;
+
+  color: #777777;
+
+  text-align: left;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  border-bottom: 1px solid #292929;
+
+  white-space: nowrap;
+}
+
+.movies-table td {
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #222222;
+
+  color: #bdbdbd;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+.movies-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.movies-table tbody tr:hover {
+  background: #151515;
+}
+
+.movies-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   MOVIE TABLE INFO
+========================================================= */
+
+.movie-table-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 230px;
+}
+
+.movie-poster {
+  width: 48px;
+
+  height: 65px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+
+  border: 1px solid #303030;
+
+  background: #181818;
+
+  flex-shrink: 0;
+}
+
+.movie-table-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.movie-table-info strong {
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.movie-table-info span {
+  color: #666666;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   GENRE BADGE
+========================================================= */
+
+.genre-badge {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  background: #181818;
+
+  border: 1px solid #2e2e2e;
+
+  border-radius: 5px;
+
+  color: #bcbcbc;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RATING BADGE
+========================================================= */
+
+.rating-badge {
+  display: inline-block;
+
+  padding: 6px 9px;
+
+  background: rgba(229, 9, 20, 0.08);
+
+  border: 1px solid rgba(229, 9, 20, 0.2);
+
+  border-radius: 5px;
+
+  color: #eeeeee;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE ACTIONS
+========================================================= */
+
+.table-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #181818;
+
+  border: 1px solid #343434;
+}
+
+.edit-btn:hover {
+  background: #252525;
+
+  border-color: #555555;
+
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: rgba(229, 9, 20, 0.06);
+
+  border: 1px solid rgba(229, 9, 20, 0.22);
+}
+
+.delete-btn:hover {
+  background: #e50914;
+
+  border-color: #e50914;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOADING / EMPTY STATUS
+========================================================= */
+
+.movies-status {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.movies-status p {
+  color: #777777;
+
+  font-size: 14px;
+
+  margin: 10px 0 0;
+}
+
+.movies-status h3 {
+  margin: 12px 0 0;
+
+  font-size: 18px;
+}
+
+.empty-icon {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(229, 9, 20, 0.08);
+
+  border: 1px solid rgba(229, 9, 20, 0.2);
+
+  font-size: 28px;
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #2b2b2b;
+
+  border-top-color: #e50914;
+
+  border-radius: 50%;
+
+  animation: movieLoader 0.8s linear infinite;
+}
+
+@keyframes movieLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-movies-main {
+    padding: 30px 25px 50px;
+  }
+
+  .movies-list-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .movie-actions {
+    width: 100%;
+  }
+
+  .movie-search {
+    flex: 1;
+
+    width: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .admin-sidebar {
+    width: 75px;
+
+    padding: 20px 10px;
+  }
+
+  .admin-brand {
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .brand-title {
+    font-size: 14px;
+
+    letter-spacing: 0;
+  }
+
+  .brand-subtitle {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+  .sidebar-line {
+    margin: 20px auto;
+  }
+
+  .sidebar-link,
+  .sidebar-logout {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .sidebar-link span:last-child,
+  .sidebar-logout span:last-child {
+    display: none;
+  }
+
+  .sidebar-icon {
+    font-size: 20px;
+  }
+
+  .admin-movies-main {
+    margin-left: 75px;
+
+    width: calc(100% - 75px);
+
+    padding: 25px 18px 40px;
+  }
+
+  .movies-admin-header {
+    align-items: flex-start;
+  }
+
+  .movies-admin-header h1 {
+    font-size: 28px;
+  }
+
+  .movies-admin-header p {
+    font-size: 12px;
+
+    max-width: 250px;
+  }
+
+  .admin-profile-info {
+    display: none;
+  }
+
+  .admin-avatar {
+    width: 43px;
+    height: 43px;
+
+    font-size: 20px;
+  }
+
+  .movie-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-full {
+    grid-column: auto;
+  }
+
+  .form-buttons {
+    grid-column: auto;
+
+    justify-content: stretch;
+  }
+
+  .cancel-btn,
+  .save-movie-btn {
+    flex: 1;
+  }
+
+  .movie-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .movie-search {
+    width: 100%;
+  }
+
+  .add-movie-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .admin-sidebar {
+    width: 62px;
+  }
+
+  .admin-movies-main {
+    margin-left: 62px;
+
+    width: calc(100% - 62px);
+
+    padding: 20px 12px 35px;
+  }
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .movies-admin-header h1 {
+    font-size: 24px;
+  }
+
+  .movie-form-section {
+    padding: 20px;
+  }
+
+  .movies-list-header {
+    padding: 20px;
+  }
+
+  .movies-table th,
+  .movies-table td {
+    padding: 13px;
+  }
+
+}

@@ -1,0 +1,690 @@
+/* =========================================
+   BOOK2WATCH - ABOUT US
+========================================= */
+
+.about-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(120, 0, 0, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(90, 0, 0, 0.12),
+      transparent 30%
+    ),
+    #050505;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.about-navbar {
+  width: 100%;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px;
+
+  background: #050505;
+
+  border-bottom: 1px solid #1e1e1e;
+
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+
+/* LOGO */
+
+.about-logo {
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 23px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+.about-logo:hover {
+  color: #ffffff;
+}
+
+
+/* NAV LINKS */
+
+.about-nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.about-nav-links a {
+  color: #cccccc;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+
+.about-nav-links a:hover {
+  color: #ff1e2d;
+}
+
+
+/* ACTIVE LINK */
+
+.about-nav-links a.active {
+  color: #ff1e2d;
+}
+
+
+/* LOGOUT */
+
+.about-nav-links .logout-link {
+  padding: 10px 18px;
+
+  border: 1px solid #e50914;
+
+  border-radius: 7px;
+
+  color: #ff1e2d;
+}
+
+
+.about-nav-links .logout-link:hover {
+  background: #e50914;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 9%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.75),
+      rgba(40, 0, 0, 0.30)
+    );
+}
+
+
+.about-hero-content {
+  max-width: 750px;
+}
+
+
+/* SMALL TITLE */
+
+.about-small-title {
+  margin: 0 0 18px;
+
+  color: #ff1e2d;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+/* HERO HEADING */
+
+.about-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 70px;
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+}
+
+
+/* HERO TEXT */
+
+.about-hero-text {
+  max-width: 650px;
+
+  margin-top: 30px;
+
+  color: #a7a7a7;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   COMMON SECTION TITLE
+========================================= */
+
+.about-section-title {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+
+.about-section-title p {
+  margin: 0 0 12px;
+
+  color: #ff1e2d;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+.about-section-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 42px;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   ABOUT CONTENT
+========================================= */
+
+.about-content {
+  width: 85%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 90px 0;
+
+  border-top: 1px solid #151515;
+}
+
+
+.about-description {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.about-description p {
+  margin: 0 0 22px;
+
+  color: #999999;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+.about-description strong {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.about-features {
+  width: 85%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 20px 0 100px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* FEATURE CARD */
+
+.feature-card {
+  padding: 32px 25px;
+
+  background: #101010;
+
+  border: 1px solid #242424;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+
+.feature-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #e50914;
+
+  box-shadow:
+    0 15px 35px rgba(229, 9, 20, 0.12);
+}
+
+
+/* FEATURE ICON */
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(229, 9, 20, 0.10);
+
+  border: 1px solid #e50914;
+
+  font-size: 28px;
+}
+
+
+.feature-card h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+}
+
+
+.feature-card p {
+  margin: 0;
+
+  color: #858585;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-section {
+  width: 85%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 90px 0 100px;
+
+  border-top: 1px solid #151515;
+}
+
+
+/* STEPS */
+
+.steps-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+.step {
+  position: relative;
+
+  padding: 30px;
+
+  background: #0c0c0c;
+
+  border: 1px solid #202020;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+
+.step:hover {
+  border-color: #e50914;
+
+  transform: translateY(-4px);
+}
+
+
+/* STEP NUMBER */
+
+.step-number {
+  color: #e50914;
+
+  font-size: 30px;
+
+  font-weight: 900;
+
+  margin-bottom: 22px;
+}
+
+
+.step h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+
+.step p {
+  margin: 0;
+
+  color: #858585;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.about-cta {
+  margin-top: 10px;
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(150, 0, 0, 0.20),
+      transparent 55%
+    );
+
+  border-top: 1px solid #151515;
+}
+
+
+.about-cta p {
+  margin: 0 0 12px;
+
+  color: #ff1e2d;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+.about-cta h2 {
+  margin: 0 0 30px;
+
+  color: #ffffff;
+
+  font-size: 45px;
+
+  font-weight: 900;
+}
+
+
+/* CTA BUTTON */
+
+.about-cta-btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background: #e50914;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 30px rgba(229, 9, 20, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+
+.about-cta-btn:hover {
+  background: #ff1e2d;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(229, 9, 20, 0.40);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.about-footer {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background: #030303;
+
+  border-top: 1px solid #1c1c1c;
+}
+
+
+.footer-logo {
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+
+.about-footer p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-navbar {
+    padding: 0 30px;
+  }
+
+  .about-nav-links {
+    gap: 18px;
+  }
+
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-hero h1 {
+    font-size: 55px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .about-navbar {
+    height: auto;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .about-nav-links {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+
+  .about-logo {
+    font-size: 20px;
+  }
+
+
+  .about-hero {
+    min-height: 500px;
+
+    padding: 70px 25px;
+  }
+
+
+  .about-hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .about-hero-text {
+    font-size: 15px;
+  }
+
+
+  .about-content,
+  .about-features,
+  .how-section {
+    width: 90%;
+  }
+
+
+  .about-section-title h2 {
+    font-size: 32px;
+  }
+
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-cta h2 {
+    font-size: 34px;
+  }
+
+}

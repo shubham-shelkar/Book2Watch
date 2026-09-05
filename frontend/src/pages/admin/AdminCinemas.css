@@ -1,0 +1,1233 @@
+/* =========================================
+   BOOK2WATCH - ADMIN CINEMAS
+   DARK + RED PROFESSIONAL THEME
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-cinemas-page {
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  background: #151515;
+  border-right: 1px solid #292929;
+
+  padding: 28px 18px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 1000;
+}
+
+/* Scrollbar */
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.admin-brand {
+  display: block;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  padding: 5px 8px 15px;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.brand-title span {
+  color: #e50914;
+}
+
+.brand-subtitle {
+  margin-top: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #888888;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SIDEBAR LINE
+========================================= */
+
+.sidebar-line {
+  height: 1px;
+  background: #292929;
+
+  margin: 10px 5px 22px;
+}
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-height: 48px;
+
+  padding: 12px 14px;
+
+  color: #a7a7a7;
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.sidebar-link:hover {
+  color: #ffffff;
+  background: #202020;
+}
+
+.sidebar-link.active {
+  color: #ffffff;
+  background: #e50914;
+
+  box-shadow: 0 5px 18px rgba(229, 9, 20, 0.18);
+}
+
+.sidebar-icon {
+  width: 22px;
+
+  text-align: center;
+
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SIDEBAR LOGOUT
+========================================= */
+
+.sidebar-bottom {
+  margin-top: 25px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #292929;
+}
+
+.sidebar-logout {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 13px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #a7a7a7;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: 0.25s ease;
+}
+
+.sidebar-logout:hover {
+  background: #202020;
+  color: #ff4b55;
+}
+
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.admin-cinemas-main {
+  margin-left: 250px;
+
+  min-height: 100vh;
+
+  padding: 35px 42px 60px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(229, 9, 20, 0.06),
+      transparent 30%
+    ),
+    #0f0f0f;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.cinemas-admin-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.cinemas-admin-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.cinemas-admin-header p {
+  margin: 8px 0 0;
+
+  color: #858585;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ADMIN PROFILE
+========================================= */
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 9px 14px;
+
+  background: #181818;
+  border: 1px solid #292929;
+
+  border-radius: 10px;
+}
+
+.admin-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #252525;
+
+  font-size: 18px;
+}
+
+.admin-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.admin-profile-info strong {
+  font-size: 13px;
+}
+
+.admin-profile-info span {
+  font-size: 11px;
+  color: #777777;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.success-message,
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 16px;
+
+  margin-bottom: 20px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.success-message {
+  background: rgba(22, 163, 74, 0.10);
+  border: 1px solid rgba(22, 163, 74, 0.35);
+  color: #62d98b;
+}
+
+.error-message {
+  background: rgba(229, 9, 20, 0.10);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  color: #ff6870;
+}
+
+.success-message span,
+.error-message span {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.success-message span {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.error-message span {
+  background: #e50914;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CINEMA FORM SECTION
+========================================= */
+
+.cinema-form-section {
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 14px;
+
+  padding: 25px;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #292929;
+}
+
+.form-small-title {
+  margin: 0 0 6px;
+
+  color: #e50914;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.form-header h2 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.close-form-btn {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  background: #202020;
+  color: #aaaaaa;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.close-form-btn:hover {
+  color: #ffffff;
+  background: #e50914;
+  border-color: #e50914;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.cinema-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #cfcfcf;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  background: #101010;
+
+  color: #ffffff;
+
+  border: 1px solid #303030;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.form-group input {
+  height: 45px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group select {
+  height: 45px;
+
+  cursor: pointer;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #5e5e5e;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #e50914;
+
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.08);
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.form-buttons {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 5px;
+}
+
+.cancel-btn,
+.save-cinema-btn {
+  min-width: 130px;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cancel-btn {
+  background: #222222;
+
+  color: #bcbcbc;
+
+  border: 1px solid #333333;
+}
+
+.cancel-btn:hover {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+.save-cinema-btn {
+  background: #e50914;
+
+  color: #ffffff;
+
+  border: 1px solid #e50914;
+
+  box-shadow: 0 6px 18px rgba(229, 9, 20, 0.18);
+}
+
+.save-cinema-btn:hover {
+  background: #c70812;
+  border-color: #c70812;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CINEMA MANAGEMENT
+========================================= */
+
+.cinemas-management {
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LIST HEADER
+========================================= */
+
+.cinemas-list-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 23px 25px;
+
+  border-bottom: 1px solid #292929;
+}
+
+.cinemas-list-header h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.cinemas-list-header p {
+  margin: 6px 0 0;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.cinema-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.cinema-search {
+  width: 230px;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 12px;
+
+  background: #101010;
+
+  border: 1px solid #303030;
+
+  border-radius: 8px;
+}
+
+.cinema-search span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.cinema-search input {
+  width: 100%;
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.cinema-search input::placeholder {
+  color: #606060;
+}
+
+.add-cinema-btn {
+  height: 42px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e50914;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-cinema-btn:hover {
+  background: #c70812;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.cinemas-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.cinemas-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cinemas-table-wrapper::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+.cinemas-table-wrapper::-webkit-scrollbar-thumb {
+  background: #e50914;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.cinemas-table {
+  width: 100%;
+
+  min-width: 1000px;
+
+  border-collapse: collapse;
+}
+
+.cinemas-table th {
+  padding: 14px 18px;
+
+  background: #141414;
+
+  color: #777777;
+
+  text-align: left;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  white-space: nowrap;
+}
+
+.cinemas-table td {
+  padding: 15px 18px;
+
+  border-top: 1px solid #252525;
+
+  color: #bdbdbd;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.cinemas-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.cinemas-table tbody tr:hover {
+  background: #1c1c1c;
+}
+
+
+/* =========================================
+   CINEMA TABLE INFO
+========================================= */
+
+.cinema-table-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 190px;
+}
+
+.cinema-image,
+.cinema-image-placeholder {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  object-fit: cover;
+
+  background: #222222;
+
+  border: 1px solid #333333;
+}
+
+.cinema-image-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+}
+
+.cinema-table-info div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.cinema-table-info strong {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+  max-width: 180px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.cinema-table-info span {
+  color: #626262;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   LOCATION BADGE
+========================================= */
+
+.location-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  background: rgba(229, 9, 20, 0.08);
+
+  border: 1px solid rgba(229, 9, 20, 0.18);
+
+  color: #e6e6e6;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   SCREEN BADGE
+========================================= */
+
+.screen-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  background: #222222;
+
+  border: 1px solid #303030;
+
+  border-radius: 6px;
+
+  color: #d0d0d0;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-badge {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: rgba(22, 163, 74, 0.12);
+
+  border: 1px solid rgba(22, 163, 74, 0.25);
+
+  color: #54cf80;
+}
+
+.status-badge.inactive {
+  background: rgba(229, 9, 20, 0.12);
+
+  border: 1px solid rgba(229, 9, 20, 0.25);
+
+  color: #ff626a;
+}
+
+
+/* =========================================
+   TABLE ACTIONS
+========================================= */
+
+.table-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.edit-btn {
+  background: #222222;
+
+  border: 1px solid #343434;
+
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background: #333333;
+
+  border-color: #555555;
+
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: rgba(229, 9, 20, 0.08);
+
+  border: 1px solid rgba(229, 9, 20, 0.22);
+
+  color: #ff626a;
+}
+
+.delete-btn:hover {
+  background: #e50914;
+
+  border-color: #e50914;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LOADING / EMPTY STATE
+========================================= */
+
+.cinemas-status {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.cinemas-status p {
+  margin: 10px 0 0;
+
+  color: #666666;
+
+  font-size: 13px;
+}
+
+.cinemas-status h3 {
+  margin: 10px 0 0;
+
+  font-size: 18px;
+}
+
+.empty-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #1d1d1d;
+
+  border: 1px solid #303030;
+
+  border-radius: 14px;
+
+  font-size: 28px;
+}
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+.loader {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid #292929;
+
+  border-top-color: #e50914;
+
+  border-radius: 50%;
+
+  animation: cinemaSpin 0.8s linear infinite;
+
+  margin-bottom: 5px;
+}
+
+@keyframes cinemaSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-sidebar {
+    width: 215px;
+  }
+
+  .admin-cinemas-main {
+    margin-left: 215px;
+
+    padding: 30px 25px 50px;
+  }
+
+  .cinemas-list-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .cinema-actions {
+    width: 100%;
+  }
+
+  .cinema-search {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    min-height: auto;
+
+    padding: 18px;
+
+    border-right: none;
+    border-bottom: 1px solid #292929;
+  }
+
+  .admin-cinemas-main {
+    margin-left: 0;
+
+    padding: 22px 15px 40px;
+  }
+
+  .sidebar-menu {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-bottom {
+    margin-top: 15px;
+  }
+
+  .cinemas-admin-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .cinemas-admin-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-profile {
+    width: 100%;
+  }
+
+  .cinema-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.form-full {
+    grid-column: auto;
+  }
+
+  .form-buttons {
+    grid-column: auto;
+
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-cinema-btn {
+    width: 100%;
+  }
+
+  .cinema-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cinema-search {
+    width: 100%;
+  }
+
+  .add-cinema-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .sidebar-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .cinema-form-section {
+    padding: 18px;
+  }
+
+  .cinemas-list-header {
+    padding: 18px;
+  }
+
+  .cinemas-table td,
+  .cinemas-table th {
+    padding: 12px;
+  }
+
+}

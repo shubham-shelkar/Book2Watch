@@ -1,0 +1,1134 @@
+/* =====================================================
+   BOOK2WATCH - ADMIN SHOWS
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN ADMIN LAYOUT
+   ===================================================== */
+
+.admin-layout {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(120, 0, 0, 0.15),
+      transparent 35%
+    ),
+    #0d0d0d;
+}
+
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  background: #151515;
+
+  border-right: 1px solid #292929;
+
+  padding: 30px 16px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 1000;
+}
+
+
+/* scrollbar */
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: #ed0712;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+.admin-logo {
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #303030;
+}
+
+
+/* =====================================================
+   ADMIN TITLE
+   ===================================================== */
+
+.admin-title {
+  color: #ed0712;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+
+  margin-top: 10px;
+  margin-bottom: 45px;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =====================================================
+   MENU LINKS
+   ===================================================== */
+
+.admin-menu a {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 54px;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  color: #d7d7d7;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* hover */
+
+.admin-menu a:hover {
+  background: #242424;
+
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+
+/* =====================================================
+   ACTIVE LINK
+   ===================================================== */
+
+.admin-menu a.active-admin-link {
+  background: #ed0712;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 20px rgba(237, 7, 18, 0.20);
+}
+
+
+/* active hover */
+
+.admin-menu a.active-admin-link:hover {
+  background: #ed0712;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+   ===================================================== */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  padding-top: 25px;
+}
+
+
+/* =====================================================
+   LOGOUT BUTTON
+   ===================================================== */
+
+.admin-logout-btn {
+  width: 100%;
+
+  height: 48px;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.admin-logout-btn:hover {
+  background: #ed0712;
+
+  border-color: #ed0712;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.admin-main {
+  margin-left: 250px;
+
+  min-height: 100vh;
+
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(80, 0, 0, 0.15),
+      transparent 35%
+    ),
+    #0d0d0d;
+}
+
+
+/* =====================================================
+   TOP BAR
+   ===================================================== */
+
+.admin-topbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #292929;
+}
+
+
+/* breadcrumb */
+
+.admin-breadcrumb {
+  margin: 0 0 8px;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* heading */
+
+.admin-topbar h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   ADMIN PROFILE
+   ===================================================== */
+
+.admin-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #2d2d2d;
+
+  border-radius: 12px;
+
+  background: #171717;
+}
+
+
+.admin-avatar {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ed0712;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+.admin-profile strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+
+.admin-profile p {
+  margin: 3px 0 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SHOW FORM SECTION
+   ===================================================== */
+
+.show-form-section {
+  margin-top: 35px;
+
+  padding: 30px;
+
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 15px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
+
+.section-title {
+  padding-bottom: 22px;
+
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #292929;
+}
+
+
+.section-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+
+.section-title p {
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   SHOW FORM
+   ===================================================== */
+
+.show-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.form-group label {
+  color: #eeeeee;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 15px;
+
+  background: #0e0e0e;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+
+.form-group input::placeholder {
+  color: #666666;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ed0712;
+
+  box-shadow:
+    0 0 0 2px rgba(237, 7, 18, 0.10);
+}
+
+
+/* select option */
+
+.form-group select option {
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   FORM BUTTONS
+   ===================================================== */
+
+.show-form-buttons {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   ADD SHOW / SAVE SHOW BUTTON
+   ===================================================== */
+
+.save-show-btn {
+  min-width: 150px;
+
+  height: 48px;
+
+  padding: 0 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ed0712;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.save-show-btn:hover {
+  background: #ff151f;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 15px rgba(237, 7, 18, 0.25);
+}
+
+
+/* =====================================================
+   CANCEL SHOW BUTTON
+   ===================================================== */
+
+.cancel-show-btn {
+  min-width: 100px;
+
+  height: 48px;
+
+  padding: 0 20px;
+
+  border: 1px solid #444444;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.cancel-show-btn:hover {
+  background: #252525;
+
+  border-color: #555555;
+}
+
+
+/* =====================================================
+   ADD SHOW BUTTON - ALL SHOWS HEADER
+   ===================================================== */
+
+/*
+   Ye button Movies page ke "+ Add Movie"
+   button jaisa red rahega.
+*/
+
+.shows-list-header button,
+.add-show-btn {
+  height: 46px;
+
+  min-width: 140px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ed0712;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.shows-list-header button:hover,
+.add-show-btn:hover {
+  background: #ff151f;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 15px rgba(237, 7, 18, 0.25);
+}
+
+
+/* =====================================================
+   SHOWS LIST
+   ===================================================== */
+
+.shows-list-section {
+  margin-top: 30px;
+
+  background: #171717;
+
+  border: 1px solid #292929;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   SHOW LIST HEADER
+   ===================================================== */
+
+.shows-list-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px 30px;
+
+  border-bottom: 1px solid #292929;
+}
+
+
+.shows-list-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 23px;
+}
+
+
+.shows-list-header p {
+  margin: 7px 0 0;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   SEARCH + ADD SHOW AREA
+   ===================================================== */
+
+.shows-list-header > div:last-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.show-search {
+  width: 320px;
+
+  height: 46px;
+
+  padding: 0 15px;
+
+  background: #0e0e0e;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+
+.show-search::placeholder {
+  color: #666666;
+}
+
+
+.show-search:focus {
+  border-color: #ed0712;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+   ===================================================== */
+
+.shows-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+.shows-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.shows-table-wrapper::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+.shows-table-wrapper::-webkit-scrollbar-thumb {
+  background: #ed0712;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.shows-table {
+  width: 100%;
+
+  min-width: 1000px;
+
+  border-collapse: collapse;
+}
+
+
+.shows-table th {
+  padding: 17px 18px;
+
+  background: #141414;
+
+  border-bottom: 1px solid #292929;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+
+.shows-table td {
+  padding: 17px 18px;
+
+  border-bottom: 1px solid #252525;
+
+  color: #dddddd;
+
+  font-size: 14px;
+}
+
+
+.shows-table tbody tr:hover {
+  background: #1d1d1d;
+}
+
+
+/* =====================================================
+   MOVIE INFO
+   ===================================================== */
+
+.show-movie-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.show-movie-info img {
+  width: 45px;
+  height: 60px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+
+  border: 1px solid #333333;
+}
+
+
+.show-movie-info span {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   CINEMA
+   ===================================================== */
+
+.shows-table td strong {
+  display: block;
+
+  color: #ffffff;
+}
+
+
+.shows-table td small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #777777;
+}
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.show-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 75px;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+
+.show-status.active {
+  background: rgba(0, 180, 80, 0.12);
+
+  border: 1px solid rgba(0, 180, 80, 0.35);
+
+  color: #32d583;
+}
+
+
+.show-status.inactive {
+  background: rgba(255, 70, 70, 0.10);
+
+  border: 1px solid rgba(255, 70, 70, 0.30);
+
+  color: #ff6b6b;
+}
+
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.show-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.edit-show-btn,
+.delete-show-btn {
+  height: 36px;
+
+  padding: 0 14px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.edit-show-btn {
+  background: #242424;
+
+  border: 1px solid #3a3a3a;
+
+  color: #ffffff;
+}
+
+
+.edit-show-btn:hover {
+  background: #333333;
+}
+
+
+.delete-show-btn {
+  background: rgba(237, 7, 18, 0.08);
+
+  border: 1px solid rgba(237, 7, 18, 0.35);
+
+  color: #ff4a53;
+}
+
+
+.delete-show-btn:hover {
+  background: #ed0712;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   NO SHOWS
+   ===================================================== */
+
+.no-shows {
+  padding: 50px !important;
+
+  text-align: center;
+
+  color: #777777 !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .admin-sidebar {
+    width: 220px;
+  }
+
+  .admin-main {
+    margin-left: 220px;
+
+    padding: 30px;
+  }
+
+  .show-form {
+    grid-template-columns: 1fr;
+  }
+
+  .show-form-buttons {
+    grid-column: auto;
+
+    justify-content: flex-end;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .admin-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: auto;
+  }
+
+  .admin-main {
+    margin-left: 0;
+
+    padding: 20px;
+  }
+
+  .admin-topbar {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .admin-profile {
+    width: 100%;
+  }
+
+  .shows-list-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .shows-list-header > div:last-child {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+  }
+
+  .show-search {
+    flex: 1;
+
+    width: auto;
+
+    min-width: 200px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .admin-sidebar {
+    padding: 20px 12px;
+  }
+
+  .admin-logo {
+    font-size: 21px;
+  }
+
+  .admin-title {
+    margin-bottom: 25px;
+  }
+
+  .admin-main {
+    padding: 15px;
+  }
+
+  .show-form-section {
+    padding: 20px;
+  }
+
+  .shows-list-header {
+    padding: 20px;
+  }
+
+  .shows-list-header > div:last-child {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .show-search {
+    width: 100%;
+  }
+
+  .shows-list-header button,
+  .add-show-btn {
+    width: 100%;
+  }
+
+  .show-form-buttons {
+    width: 100%;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+  }
+
+}
